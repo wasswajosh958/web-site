@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home - Personal Profile</title>
+</head>
+<body>
+<link rel="stylesheet"href="style.css">
+  <h1>Welcome to My Personal Profile</h1>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Me</a> |
+    <a href="portfolio.html">Portfolio/Projects</a> |
+    <a href="gallery.html">Gallery/Interests</a> |
+    <a href="contact.html">Contact Me</a>
+  </nav>
+  <p>My name is Wasswa Joshua and welcome to my website where you can atlest learn more about Wasswa joshua, my work and my other related staff.<br> I currently stay in Ndejje.</p>
+  <p><br> I do alot of stuff like making games , website ,programing and so on</p>
+  <p><br>You can get me at any time of the day and we do business together </p>
+   <img src="co.png" alt="care" width="200">
+   <video height="400" width="600" controls>
+  <source src="me.mp4"type="video/mp4">
+    </video>
+	<audio controls>
+	 <source src="daddy.mp3"type="audio/mp3">
+	 </audio>
+	  <input type="radio" name="gender" value="male"> Male
+ <input type="radio" name="gender" value="female"> Female
+
+    </footer>
+
+    <script>
+        // Function to show the selected page and hide others
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show the selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+            
+            // Update URL hash
+            window.location.hash = pageId;
+        }
+        
+        // Check URL hash on page load
+        window.addEventListener('load', function() {
+            if (window.location.hash) {
+                const pageId = window.location.hash.substring(1);
+                showPage(pageId);
+            }
+        });
+        
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html
+
